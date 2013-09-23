@@ -1,0 +1,14 @@
+{
+  "name": "Heykitten",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "homepage_url": "http://github.com/johnste/heykitten",
+  "description": "Replace facebook user images with kittens.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["script.js"]
+    }
+  ]
+}
