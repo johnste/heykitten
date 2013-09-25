@@ -1,14 +1,21 @@
 {
   "name": "Heykitten",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "homepage_url": "http://github.com/johnste/heykitten",
   "description": "Replace facebook user images with kittens.",
 
-  "content_scripts": [
-    {
-      "matches": ["*://*.facebook.com/*"],
-      "js": ["script.js"]
-    }
-  ]
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://fbcdn-profile-a.akamaihd.net/*",
+    "*://fbcdn-photos-c-a.akamaihd.net/*",
+    "*://fbcdn-sphotos-f-a.akamaihd.net/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "script.js"
+    ]
+  }
 }
